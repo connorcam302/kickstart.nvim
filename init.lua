@@ -170,6 +170,8 @@ vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = 'Goto [P]re[V]ious file' 
 vim.keymap.set('n', '<leader><leader>', function()
   vim.cmd 'so'
 end, { desc = '[S]houtout current file]' })
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected lines down' })
+vim.keymap.set('v', 'K', ":m '>-2<CR>gv=gv", { desc = 'Move selected lines up' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
